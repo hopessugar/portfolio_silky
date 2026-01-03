@@ -9,23 +9,25 @@ export const Contact: React.FC<ContactProps> = ({ personal, onSubmit }) => {
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
       
       <div className="container-custom">
-        <div className="text-center mb-24 fade-in-up">
-          <div className="inline-block mb-6">
-            <span className="text-xs uppercase tracking-[0.2em] text-slate-500 font-medium bg-slate-100 px-4 py-2 rounded-full">
+        {/* Mobile-first section header */}
+        <div className="text-center mb-16 md:mb-24 fade-in-up">
+          <div className="inline-block mb-4 md:mb-6">
+            <span className="text-xs uppercase tracking-[0.2em] text-slate-500 font-medium bg-slate-100 px-3 py-2 md:px-4 md:py-2 rounded-full">
               Get In Touch
             </span>
           </div>
-          <h2 className="text-5xl md:text-6xl lg:text-7xl luxury-heading mb-8">
+          <h2 className="mobile-heading-lg luxury-heading mb-6 md:mb-8">
             Let's Work <span className="text-gradient">Together</span>
           </h2>
-          <div className="w-24 h-0.5 bg-gradient-to-r from-slate-900 to-slate-600 mx-auto mb-8"></div>
-          <p className="text-xl premium-text max-w-3xl mx-auto leading-relaxed">
+          <div className="w-16 md:w-24 h-0.5 bg-gradient-to-r from-slate-900 to-slate-600 mx-auto mb-6 md:mb-8"></div>
+          <p className="mobile-text-lg premium-text max-w-3xl mx-auto leading-relaxed px-4">
             Ready to bring your ideas to life? I'm here to help you create amazing digital experiences 
             that drive results and exceed expectations.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        {/* Mobile-first: Stack contact info above form on mobile */}
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
           {/* Contact Information */}
           <div className="space-y-8 fade-in-left animation-delay-400">
             <div className="luxury-card p-10">
