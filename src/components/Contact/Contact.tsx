@@ -27,12 +27,12 @@ export const Contact: React.FC<ContactProps> = ({ personal, onSubmit }) => {
         </div>
 
         {/* Mobile-first: Stack contact info above form on mobile */}
-        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-center justify-center">
           {/* Contact Information */}
-          <div className="space-y-8 fade-in-left animation-delay-400">
+          <div className="space-y-8 fade-in-left animation-delay-400 w-full max-w-lg mx-auto lg:mx-0">
             <div className="luxury-card p-10">
-              <h3 className="text-3xl luxury-heading mb-6">Let's Connect</h3>
-              <p className="premium-text text-lg leading-relaxed mb-10">
+              <h3 className="text-3xl luxury-heading mb-6 text-center">Let's Connect</h3>
+              <p className="premium-text text-lg leading-relaxed mb-10 text-center">
                 I'm always excited to work on new projects and collaborate with amazing people. 
                 Whether you need a complete website, UI/UX design, or technical consultation, 
                 I'm here to help turn your vision into reality.
@@ -131,9 +131,9 @@ export const Contact: React.FC<ContactProps> = ({ personal, onSubmit }) => {
           </div>
 
           {/* Contact Form */}
-          <div className="fade-in-right animation-delay-600">
+          <div className="fade-in-right animation-delay-600 w-full max-w-lg mx-auto lg:mx-0">
             <div className="luxury-card p-10 deep-shadow">
-              <h3 className="text-3xl luxury-heading mb-8">Send Me a Message</h3>
+              <h3 className="text-3xl luxury-heading mb-8 text-center">Send Me a Message</h3>
               <ContactForm onSubmit={onSubmit} />
             </div>
           </div>
@@ -149,12 +149,12 @@ export const Contact: React.FC<ContactProps> = ({ personal, onSubmit }) => {
               Let's schedule a free consultation to discuss your needs and how I can help 
               bring your vision to life.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <a
                 href={`https://wa.me/91${personal.phone}?text=Hi%20Silky,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project.`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary inline-flex items-center justify-center group"
+                className="btn-primary inline-flex items-center justify-center group w-full sm:w-auto"
               >
                 <span className="mr-3 text-lg">💬</span>
                 <span>WhatsApp Me</span>
@@ -164,9 +164,9 @@ export const Contact: React.FC<ContactProps> = ({ personal, onSubmit }) => {
               </a>
               <a
                 href={createPhoneLink(personal.phone)}
-                className="btn-secondary group"
+                className="btn-secondary group w-full sm:w-auto text-center"
               >
-                <span className="flex items-center">
+                <span className="flex items-center justify-center">
                   Call Now
                   <svg className="ml-2 w-4 h-4 transition-transform group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
