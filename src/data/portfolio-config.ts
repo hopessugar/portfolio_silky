@@ -278,7 +278,7 @@ const services: Service[] = [
   }
 ];
 
-// Featured Projects
+// Featured Projects - Updated with Medlipi Healthcare Platform
 const projects: Project[] = [
   {
     id: 'darveys',
@@ -335,21 +335,21 @@ const projects: Project[] = [
     ]
   },
   {
-    id: 'medlipi',
-    title: 'Medlipi Healthcare Platform',
-    description: 'Comprehensive healthcare management platform with patient records and appointment scheduling',
-    longDescription: 'A modern healthcare platform designed to streamline medical practice management, featuring patient record management, appointment scheduling, and healthcare provider tools for improved patient care.',
-    imageUrl: '/images/projects/medlipi.jpg',
-    liveUrl: 'https://medlipi.com/',
-    technologies: ['React', 'Node.js', 'PostgreSQL', 'Express.js', 'Tailwind CSS'],
-    category: 'other',
+    id: 'gargoyle',
+    title: 'Gargoyle Creative Platform',
+    description: 'Modern creative showcase platform with interactive design elements and portfolio management',
+    longDescription: 'A sophisticated creative platform designed for showcasing artistic work and creative portfolios, featuring interactive design elements, smooth animations, and modern web technologies for an engaging user experience.',
+    imageUrl: '/images/projects/gargoyle.jpg',
+    liveUrl: 'https://www.gargoyle.site/',
+    technologies: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Framer Motion'],
+    category: 'design',
     featured: true,
-    completionDate: '2023-08',
+    completionDate: '2024-01',
     highlights: [
-      'Patient record management system',
-      'Appointment scheduling integration',
-      'Healthcare provider dashboard',
-      'HIPAA compliant security features'
+      'Interactive creative showcase',
+      'Smooth animations and transitions',
+      'Modern responsive design',
+      'Portfolio management system'
     ]
   }
 ];
