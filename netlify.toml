@@ -5,6 +5,7 @@
 [build.environment]
   NODE_VERSION = "18"
 
+# SPA redirect for React Router
 [[redirects]]
   from = "/*"
   to = "/index.html"
