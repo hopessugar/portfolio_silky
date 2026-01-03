@@ -62,7 +62,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
         projectType: '',
         budget: ''
       });
-    } catch (error) {
+    } catch {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
