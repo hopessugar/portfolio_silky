@@ -34,7 +34,7 @@ export interface Project {
   highlights?: string[];
 }
 
-export type ProjectCategory = 'ecommerce' | 'corporate' | 'agriculture' | 'fashion' | 'automation' | 'design' | 'other';
+export type ProjectCategory = 'ecommerce' | 'corporate' | 'agriculture' | 'fashion' | 'automation' | 'design' | 'consulting' | 'other';
 
 export interface Skill {
   name: string;

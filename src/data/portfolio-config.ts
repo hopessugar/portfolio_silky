@@ -299,21 +299,21 @@ const projects: Project[] = [
     ]
   },
   {
-    id: 'sahyadri-farms',
-    title: 'Sahyadri Farms - Seeding Goodness',
-    description: 'Agricultural business website showcasing sustainable farming practices and organic products',
-    longDescription: 'A beautiful, informative website for Sahyadri Farms that highlights their commitment to sustainable agriculture and organic farming practices, with integrated e-commerce functionality.',
-    imageUrl: '/images/projects/sahyadri-farms.jpg',
-    liveUrl: 'https://www.sahyadrifarms.com/',
-    technologies: ['Next.js', 'TypeScript', 'Sanity CMS', 'Tailwind CSS'],
-    category: 'agriculture',
+    id: 'tech-adaptive-pandit',
+    title: 'Tech Adaptive Pandit',
+    description: 'Professional technology consulting and adaptive solutions platform for modern businesses',
+    longDescription: 'A comprehensive technology consulting website that provides adaptive solutions and expert guidance for businesses looking to modernize their digital infrastructure and processes.',
+    imageUrl: '/images/projects/tech-adaptive-pandit.jpg',
+    liveUrl: 'https://techadaptivepandit.au/',
+    technologies: ['React', 'Node.js', 'MongoDB', 'AWS', 'Tailwind CSS'],
+    category: 'consulting',
     featured: true,
-    completionDate: '2023-11',
+    completionDate: '2024-01',
     highlights: [
-      'SEO-optimized content management',
-      'Sustainable design principles',
-      'Product showcase integration',
-      'Mobile-optimized experience'
+      'Professional consulting platform',
+      'Adaptive technology solutions',
+      'Modern responsive design',
+      'Australian market focused'
     ]
   },
   {
@@ -335,21 +335,21 @@ const projects: Project[] = [
     ]
   },
   {
-    id: 'natures-basket',
-    title: 'Natures Basket Organic Store',
-    description: 'Premium organic food marketplace with subscription services and health-focused features',
-    longDescription: 'An elegant organic food marketplace that emphasizes health and sustainability, featuring subscription services, nutritional information, and eco-friendly packaging options.',
-    imageUrl: '/images/projects/natures-basket.jpg',
-    liveUrl: 'https://naturesbasket.co.in/',
-    technologies: ['Next.js', 'Node.js', 'MongoDB', 'Stripe', 'Docker'],
-    category: 'ecommerce',
+    id: 'medlipi',
+    title: 'Medlipi Healthcare Platform',
+    description: 'Comprehensive healthcare management platform with patient records and appointment scheduling',
+    longDescription: 'A modern healthcare platform designed to streamline medical practice management, featuring patient record management, appointment scheduling, and healthcare provider tools for improved patient care.',
+    imageUrl: '/images/projects/medlipi.jpg',
+    liveUrl: 'https://medlipi.com/',
+    technologies: ['React', 'Node.js', 'PostgreSQL', 'Express.js', 'Tailwind CSS'],
+    category: 'other',
     featured: true,
-    completionDate: '2023-07',
+    completionDate: '2023-08',
     highlights: [
-      'Subscription service integration',
-      'Nutritional information system',
-      'Eco-friendly packaging tracker',
-      'Health-focused user experience'
+      'Patient record management system',
+      'Appointment scheduling integration',
+      'Healthcare provider dashboard',
+      'HIPAA compliant security features'
     ]
   }
 ];
