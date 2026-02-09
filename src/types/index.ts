@@ -74,10 +74,10 @@ export interface Service {
   description: string;
   icon?: string;
   features: string[];
-  category: 'website-systems' | 'automation' | 'development' | 'design' | 'optimization' | 'consulting';
+  category: 'branding' | 'website' | 'design' | 'visualization' | 'automation' | 'development' | 'optimization' | 'consulting';
 }
 
-export type ServiceCategory = 'development' | 'design' | 'automation' | 'optimization' | 'consulting';
+export type ServiceCategory = 'branding' | 'website' | 'design' | 'visualization' | 'automation' | 'development' | 'optimization' | 'consulting';
 
 export interface ContactFormData {
   name: string;

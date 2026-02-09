@@ -1,0 +1,1 @@
+export { AboutFounder } from './AboutFounder';

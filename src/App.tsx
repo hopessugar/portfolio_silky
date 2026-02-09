@@ -1,9 +1,12 @@
 import { portfolioConfig } from './data/portfolio-config';
+import { Header } from './components/Header';
 import { AgencyHero } from './components/Hero/AgencyHero';
 import { Positioning } from './components/Positioning';
 import { AgencyServices } from './components/Services';
 import { Process } from './components/Process';
 import { ProjectGallery } from './components/Projects';
+import { Testimonials } from './components/Testimonials';
+import { AboutFounder } from './components/About';
 import { FinalCTA } from './components/FinalCTA';
 import { Contact } from './components/Contact';
 
@@ -58,6 +61,7 @@ ${formData.message}`;
 
   return (
     <div className="min-h-screen">
+      <Header agency={agencyInfo} />
       <AgencyHero agency={agencyInfo} />
       {agencyInfo.positioning && agencyInfo.positioning.length > 0 && (
         <Positioning principles={agencyInfo.positioning} />
@@ -67,6 +71,8 @@ ${formData.message}`;
         <Process phases={process} />
       )}
       <ProjectGallery projects={projects} onProjectClick={handleProjectClick} />
+      <Testimonials />
+      <AboutFounder />
       <FinalCTA onStartProject={handleStartProject} />
       <Contact personal={agencyInfo as any} onSubmit={handleContactSubmit} />
     </div>

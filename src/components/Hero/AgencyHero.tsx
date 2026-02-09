@@ -25,20 +25,45 @@ export const AgencyHero: React.FC<AgencyHeroProps> = ({ agency }) => {
       
       <div className="container-custom section-padding relative w-full">
         {/* Centered content with editorial layout */}
-        <div className="max-w-5xl mx-auto text-center space-y-8 md:space-y-12 fade-in-up">
+        <div className="max-w-6xl mx-auto text-center space-y-8 md:space-y-12 fade-in-up">
           
-          {/* Small label */}
-          <div className="inline-block fade-in-up animation-delay-200">
-            <span className="text-xs uppercase tracking-[0.2em] text-slate-500 font-medium bg-slate-100 px-4 py-2 rounded-full">
-              Digital Agency
-            </span>
+          {/* Brand Logo and Name - Hero Treatment */}
+          <div className="flex flex-col items-center space-y-6 md:space-y-8 fade-in-up animation-delay-100">
+            {/* Logo - Clean and elegant */}
+            <div className="w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 relative opacity-90 hover:opacity-100 transition-opacity duration-300">
+              <img 
+                src="/images/brand/logo.jpeg"
+                alt={`${agency.name} Logo`}
+                className="w-full h-full object-contain"
+                onError={(e) => {
+                  console.error('Logo failed to load:', e);
+                  e.currentTarget.style.display = 'none';
+                }}
+                onLoad={() => {
+                  console.log('Logo loaded successfully');
+                }}
+              />
+            </div>
+            
+            {/* Brand Name - LARGE and dominant */}
+            <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold luxury-heading tracking-tight leading-none">
+              {agency.name}
+            </h1>
+            
+            {/* Tagline - smaller and refined */}
+            <p className="text-base md:text-lg lg:text-xl text-slate-600 font-light tracking-wide max-w-2xl leading-relaxed">
+              {agency.tagline}
+            </p>
           </div>
           
-          {/* Large headline with editorial typography */}
-          <h1 className="mobile-heading-xl luxury-heading leading-[0.95] fade-in-up animation-delay-400">
+          {/* Divider line */}
+          <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-slate-900 to-transparent mx-auto fade-in-up animation-delay-400"></div>
+          
+          {/* Main headline with editorial typography */}
+          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl luxury-heading leading-tight fade-in-up animation-delay-600">
             {agency.heroHeadline.split(' ').map((word, index, array) => {
               // Group words into lines for better control
-              const wordsPerLine = window.innerWidth < 768 ? 3 : 5;
+              const wordsPerLine = window.innerWidth < 768 ? 4 : 6;
               const lineBreak = (index + 1) % wordsPerLine === 0 && index < array.length - 1;
               
               return (
@@ -48,13 +73,10 @@ export const AgencyHero: React.FC<AgencyHeroProps> = ({ agency }) => {
                 </span>
               );
             })}
-          </h1>
-          
-          {/* Divider line */}
-          <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-slate-900 to-transparent mx-auto fade-in-up animation-delay-600"></div>
+          </h2>
           
           {/* Subtext with generous spacing */}
-          <p className="text-xl md:text-2xl lg:text-3xl premium-text font-light leading-relaxed max-w-3xl mx-auto fade-in-up animation-delay-800">
+          <p className="text-lg md:text-xl lg:text-2xl premium-text font-light leading-relaxed max-w-4xl mx-auto fade-in-up animation-delay-800">
             {agency.heroSubtext}
           </p>
           

@@ -19,9 +19,9 @@ export const Positioning: React.FC<PositioningProps> = ({ principles }) => {
             </div>
             
             <h2 className="mobile-heading-lg luxury-heading leading-tight">
-              Strategy before
+              Strategy Before
               <br />
-              execution
+              Execution
             </h2>
             
             <div className="w-16 h-0.5 bg-slate-900"></div>

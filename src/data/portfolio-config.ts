@@ -3,20 +3,26 @@ import type { PortfolioConfig, Skill, Service, Project, AgencyInfo, ProcessPhase
 // Sivara Solutions Agency Configuration
 const agencyInfo: AgencyInfo = {
   name: 'Sivara Solutions',
-  tagline: 'Strategy-led websites and automation built to help Indian brands grow online',
-  heroHeadline: 'Strategy-led websites and automation built to help Indian brands grow online.',
+  tagline: 'Strategy-led websites and automation built to help brands grow online',
+  heroHeadline: 'Strategy-led websites and automation built to help brands grow online.',
   heroSubtext: 'We design digital systems with clarity, purpose, and performance — built to convert and scale.',
-  logo: '/images/brand/logo.svg', // Primary logo
+  logo: '/images/brand/logo.jpeg', // Primary logo
   logoWhite: '/images/brand/logo-white.svg', // Logo for dark backgrounds
   phone: '9509610432',
   email: 'sivarasolutions@gmail.com',
-  location: 'India',
+  location: 'Udaipur, India',
   socialLinks: [
     {
       platform: 'LinkedIn',
       url: 'https://www.linkedin.com/in/vyassilky',
       icon: 'linkedin',
       label: 'Connect on LinkedIn'
+    },
+    {
+      platform: 'Instagram',
+      url: 'https://www.instagram.com/sivarasolutions?igsh=M2tuMDlraHk3NDcy',
+      icon: 'instagram',
+      label: 'Follow on Instagram'
     }
   ],
   positioning: [
@@ -246,34 +252,54 @@ const skills: Skill[] = [
   }
 ];
 
-// Services offered by Sivara Solutions
+// Services offered by Sivara Solutions - Premium Creative Services
 const services: Service[] = [
   {
-    id: 'website-systems',
-    title: 'Website Systems',
-    description: 'Conversion-focused design, strategic UX/UI, and performance-optimized builds that drive business growth.',
-    category: 'website-systems',
+    id: 'brand-visual-identity',
+    title: 'Brand & Visual Identity',
+    description: 'We create strong visual identities that help brands look credible, memorable, and consistent across all platforms.',
+    category: 'branding',
     features: [
-      'Conversion-focused design',
-      'Strategic UX/UI',
-      'Performance-optimized builds',
-      'Mobile-first approach',
-      'Accessibility compliance',
-      'SEO foundation'
+      'Logo design & brand identity',
+      'Product label & packaging design',
+      'Brand guidelines & visual systems',
+      'Marketing & promotional creatives'
     ]
   },
   {
-    id: 'automation-workflows',
-    title: 'Automation & Workflows',
-    description: 'Lead handling, internal process automation, and AI-assisted efficiency systems that scale with your business.',
-    category: 'automation',
+    id: 'website-design-development',
+    title: 'Website Design & Development',
+    description: 'Modern, responsive websites designed to represent your brand professionally and convert visitors into customers.',
+    category: 'website',
     features: [
-      'Lead handling and follow-ups',
-      'Internal process automation',
-      'AI-assisted efficiency systems',
-      'Integration with existing tools',
-      'Scalable infrastructure',
-      'Custom workflow design'
+      'Website design & development',
+      'UI/UX design',
+      'Mobile-responsive layouts',
+      'Landing pages & portfolio websites'
+    ]
+  },
+  {
+    id: 'graphic-social-media',
+    title: 'Graphic & Social Media Design',
+    description: 'High-quality digital creatives designed to help brands communicate, market, and grow online.',
+    category: 'design',
+    features: [
+      'Instagram post & story design',
+      'Invitation & promotional designs',
+      'Social media creatives',
+      'Marketing banners & visuals'
+    ]
+  },
+  {
+    id: 'product-visualization',
+    title: 'Product Visualization & Creative Media',
+    description: 'Visually compelling product designs and media that help brands showcase their products with impact.',
+    category: 'visualization',
+    features: [
+      'Product mockups & visualization',
+      '3D product modeling',
+      'Product video modeling & visuals',
+      'Creative product presentations'
     ]
   }
 ];

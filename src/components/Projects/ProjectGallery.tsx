@@ -28,7 +28,7 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({ projects, onProj
         </div>
 
         {/* Mobile-first Projects Grid: Single column on mobile */}
-        <div className="mobile-grid-2 mobile-card-gap mb-16 md:mb-24">
+        <div className="mobile-grid-2 mobile-card-gap">
           {featuredProjects.map((project, index) => (
             <div
               key={project.id}
@@ -41,49 +41,6 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({ projects, onProj
               />
             </div>
           ))}
-        </div>
-
-        {/* Mobile-optimized Call to Action */}
-        <div className="text-center fade-in-up animation-delay-800">
-          <div className="luxury-card max-w-4xl mx-auto">
-            {/* Mobile-first: Responsive padding */}
-            <div className="p-8 md:p-12 lg:p-16">
-              <h3 className="text-2xl md:text-3xl luxury-heading mb-4 md:mb-6">Ready to Create Something Extraordinary?</h3>
-              <p className="mobile-text-base premium-text mb-8 md:mb-10 max-w-2xl mx-auto">
-                Let's collaborate to bring your vision to life with exceptional design and development.
-              </p>
-              {/* Mobile-first: Touch-optimized buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
-                <button 
-                  onClick={() => {
-                    const contactSection = document.getElementById('contact');
-                    if (contactSection) {
-                      contactSection.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }}
-                  className="btn-primary group touch-target-comfortable"
-                >
-                  <span className="flex items-center justify-center">
-                    Start a Project
-                    <svg className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </span>
-                </button>
-                <button 
-                  onClick={() => window.open('https://www.linkedin.com/in/vyassilky', '_blank')}
-                  className="btn-secondary group touch-target-comfortable"
-                >
-                  <span className="flex items-center justify-center">
-                    View LinkedIn
-                    <svg className="ml-2 w-4 h-4 transition-transform group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </span>
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
