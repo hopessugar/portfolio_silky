@@ -39,19 +39,19 @@ export const Contact: React.FC<ContactProps> = ({ personal, onSubmit }) => {
               </p>
 
               {/* Contact Methods */}
-              <div className="space-y-6">
+              <div className="space-y-4">
                 {/* Phone */}
-                <div className="flex items-center space-x-6 p-6 bg-slate-50 rounded-none hover:bg-slate-100 transition-colors group">
-                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow">
+                <div className="flex items-center space-x-4 p-4 bg-slate-50 rounded-none hover:bg-slate-100 transition-colors group">
+                  <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow flex-shrink-0">
                     <svg className="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                   </div>
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <h4 className="text-slate-900 font-medium mb-1">Phone</h4>
                     <a 
                       href={createPhoneLink(personal.phone)}
-                      className="premium-text hover:text-slate-900 transition-colors"
+                      className="premium-text hover:text-slate-900 transition-colors break-words"
                     >
                       {formatPhoneNumber(personal.phone)}
                     </a>
@@ -60,17 +60,17 @@ export const Contact: React.FC<ContactProps> = ({ personal, onSubmit }) => {
 
                 {/* Email */}
                 {personal.email && (
-                  <div className="flex items-center space-x-6 p-6 bg-slate-50 rounded-none hover:bg-slate-100 transition-colors group">
-                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow">
+                  <div className="flex items-center space-x-4 p-4 bg-slate-50 rounded-none hover:bg-slate-100 transition-colors group">
+                    <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow flex-shrink-0">
                       <svg className="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                     </div>
-                    <div>
+                    <div className="min-w-0 flex-1">
                       <h4 className="text-slate-900 font-medium mb-1">Email</h4>
                       <a 
                         href={createEmailLink(personal.email, 'Portfolio Inquiry')}
-                        className="premium-text hover:text-slate-900 transition-colors"
+                        className="premium-text hover:text-slate-900 transition-colors break-all"
                       >
                         {personal.email}
                       </a>
@@ -80,24 +80,24 @@ export const Contact: React.FC<ContactProps> = ({ personal, onSubmit }) => {
 
                 {/* Location */}
                 {personal.location && (
-                  <div className="flex items-center space-x-6 p-6 bg-slate-50 rounded-none">
-                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm">
+                  <div className="flex items-center space-x-4 p-4 bg-slate-50 rounded-none">
+                    <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm flex-shrink-0">
                       <svg className="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                       </svg>
                     </div>
-                    <div>
+                    <div className="min-w-0 flex-1">
                       <h4 className="text-slate-900 font-medium mb-1">Location</h4>
-                      <p className="premium-text">{personal.location}</p>
+                      <p className="premium-text break-words">{personal.location}</p>
                     </div>
                   </div>
                 )}
 
                 {/* Social Links */}
                 {personal.socialLinks && personal.socialLinks.length > 0 && (
-                  <div className="p-6 bg-slate-50 rounded-none">
-                    <h4 className="text-slate-900 font-medium mb-4">Connect With Me</h4>
+                  <div className="p-4 bg-slate-50 rounded-none">
+                    <h4 className="text-slate-900 font-medium mb-3">Connect With Me</h4>
                     <div className="flex space-x-4">
                       {personal.socialLinks.map((link) => (
                         <a

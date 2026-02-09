@@ -92,17 +92,17 @@ export const AgencyHero: React.FC<AgencyHeroProps> = ({ agency }) => {
 
           {/* Contact info - minimal and refined */}
           <div className="pt-6 md:pt-8 space-y-4 border-t border-slate-200 max-w-2xl mx-auto fade-in-up animation-delay-1000">
-            <div className="flex flex-col sm:flex-row gap-6 justify-center text-sm">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm">
               <a 
                 href={createEmailLink(agency.email || '', 'Project Inquiry')}
-                className="flex items-center gap-2 group premium-text hover:text-slate-900 transition-colors"
+                className="flex items-center justify-center gap-2 group premium-text hover:text-slate-900 transition-colors"
               >
                 <span className="w-1 h-1 bg-slate-400 rounded-full group-hover:bg-slate-900 transition-colors"></span>
                 {agency.email}
               </a>
               <a 
                 href={createPhoneLink(agency.phone)}
-                className="flex items-center gap-2 group premium-text hover:text-slate-900 transition-colors"
+                className="flex items-center justify-center gap-2 group premium-text hover:text-slate-900 transition-colors"
               >
                 <span className="w-1 h-1 bg-slate-400 rounded-full group-hover:bg-slate-900 transition-colors"></span>
                 {formatPhoneNumber(agency.phone)}
