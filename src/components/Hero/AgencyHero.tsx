@@ -25,12 +25,12 @@ export const AgencyHero: React.FC<AgencyHeroProps> = ({ agency }) => {
       
       <div className="container-custom section-padding relative w-full">
         {/* Centered content with editorial layout */}
-        <div className="max-w-6xl mx-auto text-center space-y-8 md:space-y-12 fade-in-up">
+        <div className="max-w-6xl mx-auto text-center space-y-4 md:space-y-6 fade-in-up">
           
           {/* Brand Logo and Name - Hero Treatment */}
-          <div className="flex flex-col items-center space-y-6 md:space-y-8 fade-in-up animation-delay-100">
+          <div className="flex flex-col items-center space-y-3 md:space-y-4 fade-in-up animation-delay-100">
             {/* Logo - Clean and elegant */}
-            <div className="w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 relative opacity-90 hover:opacity-100 transition-opacity duration-300">
+            <div className="w-20 h-20 md:w-28 md:h-28 lg:w-32 lg:h-32 relative opacity-90 hover:opacity-100 transition-opacity duration-300">
               <img 
                 src="/images/brand/logo.jpeg"
                 alt={`${agency.name} Logo`}
@@ -46,21 +46,16 @@ export const AgencyHero: React.FC<AgencyHeroProps> = ({ agency }) => {
             </div>
             
             {/* Brand Name - LARGE and dominant */}
-            <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold luxury-heading tracking-tight leading-none">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold luxury-heading tracking-tight leading-none">
               {agency.name}
             </h1>
-            
-            {/* Tagline - smaller and refined */}
-            <p className="text-base md:text-lg lg:text-xl text-slate-600 font-light tracking-wide max-w-2xl leading-relaxed">
-              {agency.tagline}
-            </p>
           </div>
           
           {/* Divider line */}
           <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-slate-900 to-transparent mx-auto fade-in-up animation-delay-400"></div>
           
           {/* Main headline with editorial typography */}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl luxury-heading leading-tight fade-in-up animation-delay-600">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl luxury-heading leading-tight fade-in-up animation-delay-600">
             {agency.heroHeadline.split(' ').map((word, index, array) => {
               // Group words into lines for better control
               const wordsPerLine = window.innerWidth < 768 ? 4 : 6;
@@ -76,12 +71,12 @@ export const AgencyHero: React.FC<AgencyHeroProps> = ({ agency }) => {
           </h2>
           
           {/* Subtext with generous spacing */}
-          <p className="text-lg md:text-xl lg:text-2xl premium-text font-light leading-relaxed max-w-4xl mx-auto fade-in-up animation-delay-800">
+          <p className="text-base md:text-lg lg:text-xl premium-text font-light leading-relaxed max-w-4xl mx-auto fade-in-up animation-delay-800">
             {agency.heroSubtext}
           </p>
           
           {/* CTA Button */}
-          <div className="pt-8 md:pt-12 fade-in-up animation-delay-1000">
+          <div className="pt-4 md:pt-6 fade-in-up animation-delay-1000">
             <button 
               onClick={handleStartProject}
               className="btn-primary group touch-target-comfortable"
@@ -96,7 +91,7 @@ export const AgencyHero: React.FC<AgencyHeroProps> = ({ agency }) => {
           </div>
 
           {/* Contact info - minimal and refined */}
-          <div className="pt-12 md:pt-16 space-y-4 border-t border-slate-200 max-w-2xl mx-auto fade-in-up animation-delay-1000">
+          <div className="pt-6 md:pt-8 space-y-4 border-t border-slate-200 max-w-2xl mx-auto fade-in-up animation-delay-1000">
             <div className="flex flex-col sm:flex-row gap-6 justify-center text-sm">
               <a 
                 href={createEmailLink(agency.email || '', 'Project Inquiry')}
