@@ -1,5 +1,25 @@
-// Core data types for the portfolio
+// Core data types for the agency website
 
+export interface AgencyInfo {
+  name: string; // Agency name: "Sivara Solutions"
+  tagline: string; // Main tagline
+  heroHeadline: string; // Hero section headline
+  heroSubtext: string; // Hero section subtext
+  logo?: string; // Primary logo path
+  logoWhite?: string; // White logo for dark backgrounds
+  phone: string;
+  email?: string;
+  location?: string;
+  socialLinks?: SocialLink[];
+  positioning?: PositioningPrinciple[];
+}
+
+export interface PositioningPrinciple {
+  title: string;
+  description: string;
+}
+
+// Legacy support - will be removed
 export interface PersonalInfo {
   name: string;
   title: string;
@@ -24,12 +44,14 @@ export interface Project {
   title: string;
   description: string;
   longDescription?: string;
+  strategicApproach?: string; // New field for agency storytelling
   imageUrl: string;
   thumbnailUrl?: string;
   liveUrl: string;
   technologies: string[];
   category: ProjectCategory;
   featured: boolean;
+  isConcept?: boolean; // New field to mark concept projects
   completionDate: string;
   highlights?: string[];
 }
@@ -50,9 +72,9 @@ export interface Service {
   id: string;
   title: string;
   description: string;
-  icon: string;
+  icon?: string;
   features: string[];
-  category: ServiceCategory;
+  category: 'website-systems' | 'automation' | 'development' | 'design' | 'optimization' | 'consulting';
 }
 
 export type ServiceCategory = 'development' | 'design' | 'automation' | 'optimization' | 'consulting';
@@ -66,11 +88,19 @@ export interface ContactFormData {
 }
 
 export interface PortfolioConfig {
-  personal: PersonalInfo;
+  personal?: PersonalInfo; // Legacy support
+  agency?: AgencyInfo; // New agency info
   projects: Project[];
-  skills: Skill[];
+  skills?: Skill[]; // Optional for agency site
   services: Service[];
+  process?: ProcessPhase[]; // New for agency
   testimonials?: Testimonial[];
+}
+
+export interface ProcessPhase {
+  number: number;
+  title: string;
+  description: string;
 }
 
 export interface Testimonial {

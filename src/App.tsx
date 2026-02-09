@@ -1,11 +1,27 @@
 import { portfolioConfig } from './data/portfolio-config';
-import { Hero } from './components/Hero';
+import { AgencyHero } from './components/Hero/AgencyHero';
+import { Positioning } from './components/Positioning';
+import { AgencyServices } from './components/Services';
+import { Process } from './components/Process';
 import { ProjectGallery } from './components/Projects';
-import { Skills } from './components/Skills';
+import { FinalCTA } from './components/FinalCTA';
 import { Contact } from './components/Contact';
 
 function App() {
-  const { personal, projects, skills, services } = portfolioConfig;
+  const { agency, projects, services, process } = portfolioConfig;
+
+  // Fallback to personal if agency not defined (for backward compatibility)
+  const agencyInfo = agency || {
+    name: portfolioConfig.personal?.name || 'Sivara Solutions',
+    tagline: 'Strategy-led websites and automation built to help Indian brands grow online',
+    heroHeadline: 'Strategy-led websites and automation built to help Indian brands grow online.',
+    heroSubtext: 'We design digital systems with clarity, purpose, and performance — built to convert and scale.',
+    phone: portfolioConfig.personal?.phone || '',
+    email: portfolioConfig.personal?.email || '',
+    location: portfolioConfig.personal?.location || '',
+    socialLinks: portfolioConfig.personal?.socialLinks || [],
+    positioning: []
+  };
 
   const handleProjectClick = (project: any) => {
     window.open(project.liveUrl, '_blank', 'noopener,noreferrer');
@@ -13,7 +29,7 @@ function App() {
 
   const handleContactSubmit = async (formData: any): Promise<void> => {
     // Create WhatsApp message with form data
-    const message = `Hi Silky, I saw your portfolio and would like to discuss a project.
+    const message = `Hi, I saw your agency website and would like to discuss a project.
 
 Name: ${formData.name}
 Email: ${formData.email}
@@ -24,7 +40,7 @@ Project Details:
 ${formData.message}`;
 
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/91${personal.phone}?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/91${agencyInfo.phone}?text=${encodedMessage}`;
     
     // Open WhatsApp in a new tab
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
@@ -33,12 +49,26 @@ ${formData.message}`;
     return Promise.resolve();
   };
 
+  const handleStartProject = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen">
-      <Hero personal={personal} />
+      <AgencyHero agency={agencyInfo} />
+      {agencyInfo.positioning && agencyInfo.positioning.length > 0 && (
+        <Positioning principles={agencyInfo.positioning} />
+      )}
+      <AgencyServices services={services} />
+      {process && process.length > 0 && (
+        <Process phases={process} />
+      )}
       <ProjectGallery projects={projects} onProjectClick={handleProjectClick} />
-      <Skills skills={skills} services={services} />
-      <Contact personal={personal} onSubmit={handleContactSubmit} />
+      <FinalCTA onStartProject={handleStartProject} />
+      <Contact personal={agencyInfo as any} onSubmit={handleContactSubmit} />
     </div>
   );
 }

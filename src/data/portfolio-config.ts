@@ -1,4 +1,67 @@
-import type { PortfolioConfig, Skill, Service, Project } from '../types';
+import type { PortfolioConfig, Skill, Service, Project, AgencyInfo, ProcessPhase } from '../types';
+
+// Sivara Solutions Agency Configuration
+const agencyInfo: AgencyInfo = {
+  name: 'Sivara Solutions',
+  tagline: 'Strategy-led websites and automation built to help Indian brands grow online',
+  heroHeadline: 'Strategy-led websites and automation built to help Indian brands grow online.',
+  heroSubtext: 'We design digital systems with clarity, purpose, and performance — built to convert and scale.',
+  logo: '/images/brand/logo.svg', // Primary logo
+  logoWhite: '/images/brand/logo-white.svg', // Logo for dark backgrounds
+  phone: '9509610432',
+  email: 'sivarasolutions@gmail.com',
+  location: 'India',
+  socialLinks: [
+    {
+      platform: 'LinkedIn',
+      url: 'https://www.linkedin.com/in/vyassilky',
+      icon: 'linkedin',
+      label: 'Connect on LinkedIn'
+    }
+  ],
+  positioning: [
+    {
+      title: 'Strategy before execution',
+      description: 'We begin every project with deep strategic thinking, understanding your business goals, target audience, and competitive landscape before touching any code.'
+    },
+    {
+      title: 'No templates or shortcuts',
+      description: 'Every solution is custom-crafted for your specific needs. We don\'t believe in one-size-fits-all approaches or generic templates.'
+    },
+    {
+      title: 'Design guided by business goals',
+      description: 'Beautiful design is meaningless without results. Every design decision is driven by your business objectives and user needs.'
+    },
+    {
+      title: 'Systems built for long-term growth',
+      description: 'We build scalable, maintainable systems that grow with your business, not quick fixes that need replacement in six months.'
+    }
+  ]
+};
+
+// Agency Process Phases
+const processPhases: ProcessPhase[] = [
+  {
+    number: 1,
+    title: 'Discover & Strategize',
+    description: 'We start by understanding your business goals, target audience, and competitive landscape to create a strategic foundation.'
+  },
+  {
+    number: 2,
+    title: 'Design & Build',
+    description: 'Strategic design and development focused on conversion, performance, and user experience that drives results.'
+  },
+  {
+    number: 3,
+    title: 'Automate & Test',
+    description: 'Implement automation systems and rigorously test across devices and scenarios to ensure flawless operation.'
+  },
+  {
+    number: 4,
+    title: 'Launch & Optimize',
+    description: 'Deploy with confidence and continuously optimize based on real user data and business metrics.'
+  }
+];
 
 // Silky Vyas's Skills with expanded expertise
 const skills: Skill[] = [
@@ -183,97 +246,34 @@ const skills: Skill[] = [
   }
 ];
 
-// Services offered by Silky Vyas
+// Services offered by Sivara Solutions
 const services: Service[] = [
   {
-    id: 'fullstack-development',
-    title: 'Full-Stack Development',
-    description: 'Complete web application development from frontend to backend with modern technologies',
-    icon: '💻',
-    category: 'development',
+    id: 'website-systems',
+    title: 'Website Systems',
+    description: 'Conversion-focused design, strategic UX/UI, and performance-optimized builds that drive business growth.',
+    category: 'website-systems',
     features: [
-      'React/Next.js frontend development',
-      'Node.js backend architecture',
-      'Database design and optimization',
-      'API development and integration',
-      'Responsive web design',
-      'Performance optimization'
+      'Conversion-focused design',
+      'Strategic UX/UI',
+      'Performance-optimized builds',
+      'Mobile-first approach',
+      'Accessibility compliance',
+      'SEO foundation'
     ]
   },
   {
-    id: 'ui-ux-design',
-    title: 'UI/UX Design',
-    description: 'User-centered design solutions that combine aesthetics with functionality',
-    icon: '🎨',
-    category: 'design',
-    features: [
-      'Figma design and prototyping',
-      'Brand logo design and identity',
-      'User research and testing',
-      'Wireframing and mockups',
-      'Design system creation',
-      'Mobile-first design',
-      'Accessibility compliance'
-    ]
-  },
-  {
-    id: 'product-modeling',
-    title: 'Product Modeling & Design',
-    description: '3D product visualization and comprehensive product design solutions',
-    icon: '🎯',
-    category: 'design',
-    features: [
-      '3D product modeling',
-      'Product visualization',
-      'Concept development',
-      'Technical documentation',
-      'Prototype design',
-      'Manufacturing consultation'
-    ]
-  },
-  {
-    id: 'ai-automation',
-    title: 'AI Automation Solutions',
-    description: 'Intelligent automation to streamline business processes and enhance user experience',
-    icon: '🤖',
+    id: 'automation-workflows',
+    title: 'Automation & Workflows',
+    description: 'Lead handling, internal process automation, and AI-assisted efficiency systems that scale with your business.',
     category: 'automation',
     features: [
-      'Custom chatbot development',
-      'Workflow automation',
-      'AI service integration',
-      'Process optimization',
-      'Customer service automation',
-      'Data processing automation'
-    ]
-  },
-  {
-    id: 'seo-optimization',
-    title: 'SEO & Website Optimization',
-    description: 'Comprehensive SEO strategies and performance optimization for maximum visibility',
-    icon: '📈',
-    category: 'optimization',
-    features: [
-      'Technical SEO audit',
-      'Content optimization',
-      'Performance enhancement',
-      'Core Web Vitals improvement',
-      'Analytics setup and tracking',
-      'Conversion rate optimization'
-    ]
-  },
-  {
-    id: 'consulting',
-    title: 'Technical Consulting',
-    description: 'Strategic technology guidance and architecture planning for your projects',
-    icon: '💡',
-    category: 'consulting',
-    features: [
-      'Technology stack selection',
-      'Architecture planning',
-      'Code review and optimization',
-      'Team training and mentoring',
-      'Project management',
-      'Digital transformation strategy'
+      'Lead handling and follow-ups',
+      'Internal process automation',
+      'AI-assisted efficiency systems',
+      'Integration with existing tools',
+      'Scalable infrastructure',
+      'Custom workflow design'
     ]
   }
 ];
@@ -285,11 +285,13 @@ const projects: Project[] = [
     title: 'Darveys E-commerce Platform',
     description: 'Modern e-commerce solution with advanced product catalog and seamless checkout experience',
     longDescription: 'A comprehensive e-commerce platform built with React and Node.js, featuring advanced product filtering, secure payment integration, and responsive design for optimal mobile experience.',
+    strategicApproach: 'Focused on conversion optimization through strategic UX patterns, reducing cart abandonment by 35% through streamlined checkout flow and trust-building elements.',
     imageUrl: '/images/projects/darveys.jpg',
     liveUrl: 'https://www.darveys.com/',
     technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Tailwind CSS'],
     category: 'ecommerce',
     featured: true,
+    isConcept: false,
     completionDate: '2024-01',
     highlights: [
       'Increased conversion rate by 35%',
@@ -303,11 +305,13 @@ const projects: Project[] = [
     title: 'Tech Adaptive Pandit',
     description: 'Professional technology consulting and adaptive solutions platform for modern businesses',
     longDescription: 'A comprehensive technology consulting website that provides adaptive solutions and expert guidance for businesses looking to modernize their digital infrastructure and processes.',
+    strategicApproach: 'Positioned as a trusted advisor through authority-building content architecture and clear service differentiation, establishing credibility in the Australian market.',
     imageUrl: '/images/projects/tech-adaptive-pandit.jpg',
     liveUrl: 'https://techadaptivepandit.au/',
     technologies: ['React', 'Node.js', 'MongoDB', 'AWS', 'Tailwind CSS'],
     category: 'consulting',
     featured: true,
+    isConcept: false,
     completionDate: '2024-01',
     highlights: [
       'Professional consulting platform',
@@ -321,11 +325,13 @@ const projects: Project[] = [
     title: 'BeYoung Fashion Platform',
     description: 'Trendy fashion e-commerce platform with dynamic product displays and social integration',
     longDescription: 'A vibrant fashion e-commerce platform targeting young consumers, featuring dynamic product displays, social media integration, and personalized shopping experiences.',
+    strategicApproach: 'Leveraged social proof and personalization to create an engaging shopping experience that resonates with Gen Z consumers, driving repeat purchases through smart recommendations.',
     imageUrl: '/images/projects/beyoung.jpg',
     liveUrl: 'https://www.beyoung.in/',
     technologies: ['React', 'Express.js', 'PostgreSQL', 'Redis', 'AWS'],
     category: 'fashion',
     featured: true,
+    isConcept: false,
     completionDate: '2023-09',
     highlights: [
       'Social media integration',
@@ -339,11 +345,13 @@ const projects: Project[] = [
     title: 'Gargoyle Creative Platform',
     description: 'Modern creative showcase platform with interactive design elements and portfolio management',
     longDescription: 'A sophisticated creative platform designed for showcasing artistic work and creative portfolios, featuring interactive design elements, smooth animations, and modern web technologies for an engaging user experience.',
+    strategicApproach: 'Created an immersive visual experience that puts creative work front and center, using subtle animations and editorial layouts to enhance portfolio presentation without overwhelming the content.',
     imageUrl: '/images/projects/gargoyle.jpg',
     liveUrl: 'https://www.gargoyle.site/',
     technologies: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Framer Motion'],
     category: 'design',
     featured: true,
+    isConcept: false,
     completionDate: '2024-01',
     highlights: [
       'Interactive creative showcase',
@@ -356,6 +364,7 @@ const projects: Project[] = [
 
 // Main portfolio configuration
 export const portfolioConfig: PortfolioConfig = {
+  agency: agencyInfo,
   personal: {
     name: 'Silky Vyas',
     title: 'Full-Stack Developer & Designer',
@@ -363,7 +372,7 @@ export const portfolioConfig: PortfolioConfig = {
     bio: 'Passionate full-stack developer and designer with expertise in modern web technologies, AI automation, and user-centered design. I specialize in creating scalable web applications, intelligent automation solutions, brand identity design, and beautiful user interfaces that drive business growth.',
     profileImage: '/images/my_img.jpeg',
     phone: '9509610432',
-    email: 'silky15585@gmail.com',
+    email: 'sivarasolutions@gmail.com',
     location: 'India',
     socialLinks: [
       {
@@ -376,5 +385,6 @@ export const portfolioConfig: PortfolioConfig = {
   },
   projects,
   skills,
-  services
+  services,
+  process: processPhases
 };

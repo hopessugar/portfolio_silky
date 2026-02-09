@@ -27,11 +27,17 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onProjectClic
       <div className="p-6 md:p-8 lg:p-10 pb-6 md:pb-8">
         <div className="flex items-start justify-between mb-4 md:mb-6">
           <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-2 md:gap-3 mb-3 md:mb-4">
+            <div className="flex items-center gap-2 md:gap-3 mb-3 md:mb-4 flex-wrap">
               <div className="w-2 h-2 bg-slate-900 rounded-full flex-shrink-0"></div>
               <span className="text-xs uppercase tracking-[0.15em] text-slate-500 font-medium truncate">
                 {project.category} • {formatDate(project.completionDate)}
               </span>
+              {/* Concept label */}
+              {project.isConcept && (
+                <span className="text-xs italic text-slate-500 bg-slate-50 px-2 py-1 rounded">
+                  Concept Project
+                </span>
+              )}
             </div>
             {/* Mobile-first: Responsive heading */}
             <h3 className="text-2xl md:text-3xl luxury-heading mb-3 md:mb-4 group-hover:text-slate-700 transition-colors leading-tight">
@@ -49,6 +55,13 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onProjectClic
         <p className="premium-text text-base md:text-lg leading-relaxed mb-6 md:mb-8">
           {project.description}
         </p>
+
+        {/* Strategic approach - new field */}
+        {project.strategicApproach && (
+          <p className="text-sm md:text-base premium-text italic opacity-70 leading-relaxed border-l-2 border-slate-200 pl-4 mb-6 md:mb-8">
+            {project.strategicApproach}
+          </p>
+        )}
 
         {/* Mobile-first: Touch-optimized Visit Project Button */}
         <button
