@@ -335,7 +335,7 @@ const projects: Project[] = [
     imageUrl: '/images/projects/prakhar-foods.jpg',
     liveUrl: 'https://prakharfoods.com/',
     technologies: ['React', 'Tailwind CSS', 'Responsive Design'],
-    category: 'website',
+    category: 'corporate',
     featured: true,
     isConcept: false,
     completionDate: '2024-01',
