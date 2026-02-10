@@ -8,7 +8,7 @@ const agencyInfo: AgencyInfo = {
   heroSubtext: 'We design digital systems with clarity, purpose, and performance — built to convert and scale.',
   logo: '/images/brand/logo.jpeg', // Primary logo
   logoWhite: '/images/brand/logo-white.svg', // Logo for dark backgrounds
-  phone: '9509610432',
+  phone: '9460510432',
   email: 'sivarasolutions@gmail.com',
   location: 'Udaipur, India',
   socialLinks: [
@@ -327,23 +327,23 @@ const projects: Project[] = [
     ]
   },
   {
-    id: 'tech-adaptive-pandit',
-    title: 'Tech Adaptive Pandit',
-    description: 'Professional technology consulting and adaptive solutions platform for modern businesses',
-    longDescription: 'A comprehensive technology consulting website that provides adaptive solutions and expert guidance for businesses looking to modernize their digital infrastructure and processes.',
-    strategicApproach: 'Positioned as a trusted advisor through authority-building content architecture and clear service differentiation, establishing credibility in the Australian market.',
-    imageUrl: '/images/projects/tech-adaptive-pandit.jpg',
-    liveUrl: 'https://techadaptivepandit.au/',
-    technologies: ['React', 'Node.js', 'MongoDB', 'AWS', 'Tailwind CSS'],
-    category: 'consulting',
+    id: 'prakhar-foods',
+    title: 'Prakhar Foods',
+    description: 'Professional business website showcasing premium food products with modern design and responsive layout',
+    longDescription: 'A clean, professional frontend website built for Prakhar Foods to showcase their premium frozen foods, fresh produce, and specialty ingredients. Features modern design, responsive layout, and easy navigation for business clients.',
+    strategicApproach: 'Designed a trust-building website with clean aesthetics that highlights product quality and makes it easy for business clients to explore offerings and connect with the company.',
+    imageUrl: '/images/projects/prakhar-foods.jpg',
+    liveUrl: 'https://prakharfoods.com/',
+    technologies: ['React', 'Tailwind CSS', 'Responsive Design'],
+    category: 'website',
     featured: true,
     isConcept: false,
     completionDate: '2024-01',
     highlights: [
-      'Professional consulting platform',
-      'Adaptive technology solutions',
-      'Modern responsive design',
-      'Australian market focused'
+      'Modern responsive website',
+      'Clean professional design',
+      'Product showcase layout',
+      'Business-focused interface'
     ]
   },
   {
@@ -397,7 +397,7 @@ export const portfolioConfig: PortfolioConfig = {
     tagline: 'Crafting Digital Experiences with Code & Creativity',
     bio: 'Passionate full-stack developer and designer with expertise in modern web technologies, AI automation, and user-centered design. I specialize in creating scalable web applications, intelligent automation solutions, brand identity design, and beautiful user interfaces that drive business growth.',
     profileImage: '/images/my_img.jpeg',
-    phone: '9509610432',
+    phone: '9460510432',
     email: 'sivarasolutions@gmail.com',
     location: 'India',
     socialLinks: [
