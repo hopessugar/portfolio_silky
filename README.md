@@ -185,9 +185,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Silky Vyas** - Full-Stack Developer & Designer
 
 - 📧 Email: silky15585@gmail.com
-- 📱 Phone: 9509610432
 - 💼 LinkedIn: [vyassilky](https://www.linkedin.com/in/vyassilky)
-- 🌐 Portfolio: [Your Live Site URL]
 
 ---
 
